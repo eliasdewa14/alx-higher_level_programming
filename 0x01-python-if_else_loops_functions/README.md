@@ -2,84 +2,138 @@
 
 # Mandatory and advanced tasks
 
-0. Write a Shell script that runs a Python script.
-
-    The Python file name will be saved in the environment variable $PYFILE 
-
-1. Write a Shell script that runs Python code. The Python code will be saved in the environment variable $PYCODE
-
-2. Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
-
-    Use the function print
-
-3. Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
+0. This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
 
     You can find the source code here
-    The output of the script should be:
-    the number, followed by Battery street,
-    followed by a new line
-    You are not allowed to cast the variable number into a string
-    Your code must be 3 lines long
-    You have to use f-strings tips
-  
-4. Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
-
-    You can find the source code here
+    The variable number will store a different value every time you will run this program
+    You don’t have to understand what import, random. randint do. Please do not touch this code
     The output of the program should be:
-    Float:, followed by the float with only 2 digits
+        The number, followed by
+            if the number is greater than 0: is positive
+            if the number is 0: is zero
+            if the number is less than 0: is negative
     followed by a new line
-    You are not allowed to cast number to string
-    You have to use f-strings
-  
-5. Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
 
-    You can find the source code here
-    The output of the program should be:
-    3 times the value of str
-    followed by a new line
-    followed by the 9 first characters of str
-    followed by a new line
-    You are not allowed to use any loops or conditional statement
-    Your program should be maximum 5 lines long
-  
-6. Complete this source code to print Welcome to Holberton School!
+1. This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable number.
 
-    You can find the source code here
-    You are not allowed to use any loops or conditional statements.
-    You have to use the variables str1 and str2 in your new line of code
-    Your program should be exactly 5 lines long
-  
-7. Complete this source code
+        You can find the source code here
+        The variable number will store a different value every time you will run this program
+        You don’t have to understand what import, random.randint do. Please do not touch this code. This line should not change: number = random.randint(-10000, 10000)
+        The output of the program should be:
+            The string Last digit of, followed by
+            the number, followed by
+            the string is, followed by the last digit of number, followed by
+                if the last digit is greater than 5: the string and is greater than 5
+                if the last digit is 0: the string and is 0
+                if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
+            followed by a new line
 
-    You can find the source code here
-    You are not allowed to use any loops or conditional statements
-    Your program should be exactly 8 lines long
-    word_first_3 should contain the first 3 letters of the variable word
-    word_last_2 should contain the last 2 letters of the variable word
-    middle_word should contain the value of the variable word without the first and last letters
-  
-8. Complete this source code to print object-oriented programming with Python, followed by a new line.
+2. Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
 
-    You can find the source code here
-    You are not allowed to use any loops or conditional statements
-    Your program should be exactly 5 lines long
-    You are not allowed to create new variables
-    You are not allowed to use string literals
-  
-9. Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+    You can only use one print function with string format
+    You can only use one loop in your code
+    You are not allowed to store characters in a variable
+    You are not allowed to import any module
 
-    Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)
+3. Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+
+    Print all the letters except q and e
+    You can only use one print function with string format
+    You can only use one loop in your code
+    You are not allowed to store characters in a variable
+    You are not allowed to import any module
   
-10. Technical interview preparation:
+4. Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
+
+    You can only use one print function with string format
+    You can only use one loop in your code
+    You are not allowed to store numbers or strings in a variable
+    You are not allowed to import any module
+  
+5. Write a program that prints numbers from 0 to 99.
+
+    Numbers must be separated by ,, followed by a space
+    Numbers should be printed in ascending order, with two digits
+    The last number should be followed by a new line
+    You can only use no more than 2 print functions with string format
+    You can only use one loop in your code
+    You are not allowed to store numbers or strings in a variable
+    You are not allowed to import any module
+  
+6. Write a program that prints all possible different combinations of two digits.
+
+    Numbers must be separated by ,, followed by a space
+    The two digits must be different
+    01 and 10 are considered the same combination of the two digits 0 and 1
+    Print only the smallest combination of two digits
+    Numbers should be printed in ascending order, with two digits
+    The last number should be followed by a new line
+    You can only use no more than 3 print functions with string format
+    You can only use no more than 2 loops in your code
+    You are not allowed to store numbers or strings in a variable
+    You are not allowed to import any module
+  
+7. Write a function that checks for lowercase character.
+
+    Prototype: def islower(c):
+    Returns True if c is lowercase
+    Returns False otherwise
+    You are not allowed to import any module
+    You are not allowed to use str.upper() and str.isupper()
+    Tips: ord()
+    
+    You don’t need to understand __import__
+  
+8. Write a function that prints a string in uppercase followed by a new line.
+
+    Prototype: def uppercase(str):
+    You can only use no more than 2 print functions with string format
+    You can only use one loop in your code
+    You are not allowed to import any module
+    You are not allowed to use str.upper() and str.isupper()
+    Tips: ord()
+    
+    You don’t need to understand __import__
+  
+9.Write a function that prints the last digit of a number.
+
+    Prototype: def print_last_digit(number):
+    Returns the value of the last digit
+    You are not allowed to import any module
+    
+    You don’t need to understand __import__
+  
+10. Write a function that adds two integers and returns the result.
+
+    Prototype: def add(a, b):
+    Returns the value of a + b
+    You are not allowed to import any module
+    
+    You don’t need to understand __import__
+    
+11. Write a function that computes a to the power of b and return the value.
+
+    Prototype: def pow(a, b):
+    Returns the value of a ^ b
+    You are not allowed to import any module
+    
+    You don’t need to understand __import__
+    
+12. Write a function that prints the numbers from 1 to 100 separated by a space.
+
+    For multiples of three print Fizz instead of the number and for multiples of five print Buzz.
+    For numbers which are multiples of both three and five print FizzBuzz.
+    Prototype: def fizzbuzz():
+    Each element should be followed by a space
+    You are not allowed to import any module
+    You don’t need to understand __import__
+    
+13. Write a function in C that inserts a number into a sorted singly linked list.
+
+    Technical interview preparation:
 
     You are not allowed to google anything
     Whiteboard first
-    This task and all future technical interview prep tasks will include checks for the efficiency of your solution, i.e. is your solution’s runtime fast enough, does your solution require extra memory usage / mallocs, etc.
-    Write a function in C that checks if a singly linked list has a cycle in it.
 
-    Prototype: int check_cycle(listint_t *list);
-
-    Return: 0 if there is no cycle, 1 if there is a cycle
-    Requirements:
-
-    Only these functions are allowed: write, printf, putchar, puts, malloc, free 
+    Prototype: listint_t *insert_node(listint_t **head, int number);
+    Return: the address of the new node, or NULL if it failed
