@@ -95,7 +95,7 @@
 
         You don’t need to understand __import__
   
-9.Write a function that prints the last digit of a number.
+9. Write a function that prints the last digit of a number.
 
         Prototype: def print_last_digit(number):
         Returns the value of the last digit
