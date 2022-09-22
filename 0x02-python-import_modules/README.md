@@ -1,139 +1,59 @@
-# 0x01. Python - import & modules
+# 0x02. Python - import & modules
 
 # Mandatory and advanced tasks
 
-0. This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
+0. Write a program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3
 
-    You can find the source code here
-    The variable number will store a different value every time you will run this program
-    You don’t have to understand what import, random. randint do. Please do not touch this code
-    The output of the program should be:
-        The number, followed by
-            if the number is greater than 0: is positive
-            if the number is 0: is zero
-            if the number is less than 0: is negative
-    followed by a new line
+        You have to use print function with string format to display integers
+        You have to assign:
+            the value 1 to a variable called a
+            the value 2 to a variable called b
+            and use those two variables as arguments when calling the functions add and print
+        a and b must be defined in 2 different lines: a = 1 and another b = 2
+        Your program should print: <a value> + <b value> = <add(a, b) value> followed with a new line
+        You can only use the word add_0 once in your code
+        You are not allowed to use * for importing or __import__
+        Your code should not be executed when imported - by using __import__, like the example below
 
-1. This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable number.
+1. Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.
 
-        You can find the source code here
-        The variable number will store a different value every time you will run this program
-        You don’t have to understand what import, random.randint do. Please do not touch this code. This line should not change: number = random.randint(-10000, 10000)
-        The output of the program should be:
-            The string Last digit of, followed by
-            the number, followed by
-            the string is, followed by the last digit of number, followed by
-                if the last digit is greater than 5: the string and is greater than 5
-                if the last digit is 0: the string and is 0
-                if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
-            followed by a new line
+        Do not use the function print (with string format to display integers) more than 4 times
+        You have to define:
+            the value 10 to a variable a
+            the value 5 to a variable b
+            and use those two variables only, as arguments when calling functions (including print)
+        a and b must be defined in 2 different lines: a = 10 and another b = 5
+        Your program should call each of the imported functions. See example below for format
+        the word calculator_1 should be used only once in your file
+        You are not allowed to use * for importing or __import__
+        Your code should not be executed when imported
 
-2. Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+2. Write a program that prints the number of and the list of its arguments.
 
-    You can only use one print function with string format
-    You can only use one loop in your code
-    You are not allowed to store characters in a variable
-    You are not allowed to import any module
+        The output should be:
+            Number of argument(s) followed by argument (if number is one) or arguments (otherwise), followed by
+            : (or . if no arguments were passed) followed by
+            a new line, followed by (if at least one argument),
+            one line per argument:
+                the position of the argument (starting at 1) followed by :, followed by the argument value and a new line
+        Your code should not be executed when imported
+        The number of elements of argv can be retrieved by using: len(argv)
+        You do not have to fully understand lists yet, but imagine that argv can be used just like a C array: you can use an index to walk through it. There are other ways (which will be preferred for future project tasks), if you know them you can use them.
 
-3. Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+3. Write a program that prints the result of the addition of all arguments
 
-    Print all the letters except q and e
-    You can only use one print function with string format
-    You can only use one loop in your code
-    You are not allowed to store characters in a variable
-    You are not allowed to import any module
+        The output should be the result of the addition of all arguments, followed by a new line
+        You can cast arguments into integers by using int() (you can assume that all arguments can be casted into integers)
+        Your code should not be executed when imported
   
-4. Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
+4. Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally).
 
-    You can only use one print function with string format
-    You can only use one loop in your code
-    You are not allowed to store numbers or strings in a variable
-    You are not allowed to import any module
+        You should print one name per line, in alpha order
+        You should print only names that do not start with __
+        Your code should not be executed when imported
+        Make sure you are running your code in Python3.8.x (hidden_4.pyc has been compiled with this version)
   
-5. Write a program that prints numbers from 0 to 99.
+5. Write a program that imports the variable a from the file variable_load_5.py and prints its value.
 
-    Numbers must be separated by ,, followed by a space
-    Numbers should be printed in ascending order, with two digits
-    The last number should be followed by a new line
-    You can only use no more than 2 print functions with string format
-    You can only use one loop in your code
-    You are not allowed to store numbers or strings in a variable
-    You are not allowed to import any module
-  
-6. Write a program that prints all possible different combinations of two digits.
-
-    Numbers must be separated by ,, followed by a space
-    The two digits must be different
-    01 and 10 are considered the same combination of the two digits 0 and 1
-    Print only the smallest combination of two digits
-    Numbers should be printed in ascending order, with two digits
-    The last number should be followed by a new line
-    You can only use no more than 3 print functions with string format
-    You can only use no more than 2 loops in your code
-    You are not allowed to store numbers or strings in a variable
-    You are not allowed to import any module
-  
-7. Write a function that checks for lowercase character.
-
-    Prototype: def islower(c):
-    Returns True if c is lowercase
-    Returns False otherwise
-    You are not allowed to import any module
-    You are not allowed to use str.upper() and str.isupper()
-    Tips: ord()
-    
-    You don’t need to understand __import__
-  
-8. Write a function that prints a string in uppercase followed by a new line.
-
-    Prototype: def uppercase(str):
-    You can only use no more than 2 print functions with string format
-    You can only use one loop in your code
-    You are not allowed to import any module
-    You are not allowed to use str.upper() and str.isupper()
-    Tips: ord()
-    
-    You don’t need to understand __import__
-  
-9.Write a function that prints the last digit of a number.
-
-    Prototype: def print_last_digit(number):
-    Returns the value of the last digit
-    You are not allowed to import any module
-    
-    You don’t need to understand __import__
-  
-10. Write a function that adds two integers and returns the result.
-
-    Prototype: def add(a, b):
-    Returns the value of a + b
-    You are not allowed to import any module
-    
-    You don’t need to understand __import__
-    
-11. Write a function that computes a to the power of b and return the value.
-
-    Prototype: def pow(a, b):
-    Returns the value of a ^ b
-    You are not allowed to import any module
-    
-    You don’t need to understand __import__
-    
-12. Write a function that prints the numbers from 1 to 100 separated by a space.
-
-    For multiples of three print Fizz instead of the number and for multiples of five print Buzz.
-    For numbers which are multiples of both three and five print FizzBuzz.
-    Prototype: def fizzbuzz():
-    Each element should be followed by a space
-    You are not allowed to import any module
-    You don’t need to understand __import__
-    
-13. Write a function in C that inserts a number into a sorted singly linked list.
-
-    Technical interview preparation:
-
-    You are not allowed to google anything
-    Whiteboard first
-
-    Prototype: listint_t *insert_node(listint_t **head, int number);
-    Return: the address of the new node, or NULL if it failed
+        You are not allowed to use * for importing or __import__
+        Your code should not be executed when imported
