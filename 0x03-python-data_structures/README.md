@@ -1,59 +1,117 @@
-# 0x02. Python - import & modules
+# 0x03. Python - Data Structures: Lists, Tuples
 
 # Mandatory and advanced tasks
 
-0. Write a program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3
+0. Write a function that prints all integers of a list.
 
-        You have to use print function with string format to display integers
-        You have to assign:
-            the value 1 to a variable called a
-            the value 2 to a variable called b
-            and use those two variables as arguments when calling the functions add and print
-        a and b must be defined in 2 different lines: a = 1 and another b = 2
-        Your program should print: <a value> + <b value> = <add(a, b) value> followed with a new line
-        You can only use the word add_0 once in your code
-        You are not allowed to use * for importing or __import__
-        Your code should not be executed when imported - by using __import__, like the example below
+        Prototype: def print_list_integer(my_list=[]):
+        Format: one integer per line. See example
+        You are not allowed to import any module
+        You can assume that the list only contains integers
+        You are not allowed to cast integers into strings
+        You have to use str.format() to print integers
 
-1. Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.
+1. Write a function that retrieves an element from a list like in C.
 
-        Do not use the function print (with string format to display integers) more than 4 times
-        You have to define:
-            the value 10 to a variable a
-            the value 5 to a variable b
-            and use those two variables only, as arguments when calling functions (including print)
-        a and b must be defined in 2 different lines: a = 10 and another b = 5
-        Your program should call each of the imported functions. See example below for format
-        the word calculator_1 should be used only once in your file
-        You are not allowed to use * for importing or __import__
-        Your code should not be executed when imported
+        Prototype: def element_at(my_list, idx):
+        If idx is negative, the function should return None
+        If idx is out of range (> of number of element in my_list), the function should return None
+        You are not allowed to import any module
+        You are not allowed to use try/except
 
-2. Write a program that prints the number of and the list of its arguments.
+2. Write a function that replaces an element of a list at a specific position (like in C).
 
-        The output should be:
-            Number of argument(s) followed by argument (if number is one) or arguments (otherwise), followed by
-            : (or . if no arguments were passed) followed by
-            a new line, followed by (if at least one argument),
-            one line per argument:
-                the position of the argument (starting at 1) followed by :, followed by the argument value and a new line
-        Your code should not be executed when imported
-        The number of elements of argv can be retrieved by using: len(argv)
-        You do not have to fully understand lists yet, but imagine that argv can be used just like a C array: you can use an index to walk through it. There are other ways (which will be preferred for future project tasks), if you know them you can use them.
+        Prototype: def replace_in_list(my_list, idx, element):
+        If idx is negative, the function should not modify anything, and returns the original list
+        If idx is out of range (> of number of element in my_list), the function should not modify anything, and returns the original list
+        You are not allowed to import any module
+        You are not allowed to use try/except
 
-3. Write a program that prints the result of the addition of all arguments
+3. Write a function that prints all integers of a list, in reverse order.
 
-        The output should be the result of the addition of all arguments, followed by a new line
-        You can cast arguments into integers by using int() (you can assume that all arguments can be casted into integers)
-        Your code should not be executed when imported
+        Prototype: def print_reversed_list_integer(my_list=[]):
+        Format: one integer per line. See example
+        You are not allowed to import any module
+        You can assume that the list only contains integers
+        You are not allowed to cast integers into strings
+        You have to use str.format() to print integers
   
-4. Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally).
+4. Write a function that replaces an element in a list at a specific position without modifying the original list (like in C).
 
-        You should print one name per line, in alpha order
-        You should print only names that do not start with __
-        Your code should not be executed when imported
-        Make sure you are running your code in Python3.8.x (hidden_4.pyc has been compiled with this version)
+        Prototype: def new_in_list(my_list, idx, element):
+        If idx is negative, the function should return a copy of the original list
+        If idx is out of range (> of number of element in my_list), the function should return a copy of the original list
+        You are not allowed to import any module
+        You are not allowed to use try/except
   
-5. Write a program that imports the variable a from the file variable_load_5.py and prints its value.
+5. Write a function that removes all characters c and C from a string.
 
-        You are not allowed to use * for importing or __import__
-        Your code should not be executed when imported
+        Prototype: def no_c(my_string):
+        The function should return the new string
+        You are not allowed to import any module
+        You are not allowed to use str.replace()
+
+6. Write a function that prints a matrix of integers.
+
+        Prototype: def print_matrix_integer(matrix=[[]]):
+        Format: see example
+        You are not allowed to import any module
+        You can assume that the list only contains integers
+        You are not allowed to cast integers into strings
+        You have to use str.format() to print integers
+
+7. Write a function that adds 2 tuples.
+
+        Prototype: def add_tuple(tuple_a=(), tuple_b=()):
+        Returns a tuple with 2 integers:
+                The first element should be the addition of the first element of each argument
+                The second element should be the addition of the second element of each argument
+        You are not allowed to import any module
+        You can assume that the two tuples will only contain integers
+        If a tuple is smaller than 2, use the value 0 for each missing integer
+        If a tuple is bigger than 2, use only the first 2 integers
+        
+8. Write a function that returns a tuple with the length of a string and its first character.
+
+        Prototype: def multiple_returns(sentence):
+        If the sentence is empty, the first character should be equal to None
+        You are not allowed to import any module
+       
+9. Write a function that finds the biggest integer of a list.
+
+        Prototype: def max_integer(my_list=[]):
+        If the list is empty, return None
+        You can assume that the list only contains integers
+        You are not allowed to import any module
+        You are not allowed to use the builtin max()
+        
+10. Write a function that finds all multiples of 2 in a list.
+
+        Prototype: def divisible_by_2(my_list=[]):
+        Return a new list with True or False, depending on whether the integer at the same position in the original list is a multiple of 2
+        The new list should have the same size as the original list
+        You are not allowed to import any module
+        
+11. Write a function that deletes the item at a specific position in a list.
+
+        Prototype: def delete_at(my_list=[], idx=0):
+        If idx is negative or out of range, nothing change (returns the same list)
+        You are not allowed to use pop()
+        You are not allowed to import any module
+
+12. Complete the source code in order to switch value of a and b
+
+        You can find the source code here
+        Your code should be inserted where the comment is (line 4)
+        Your program should be exactly 5 lines long
+        
+13. Write a function in C that checks if a singly linked list is a palindrome.
+
+        Technical interview preparation:
+
+        You are not allowed to google anything
+        Whiteboard first
+        
+        Prototype: int is_palindrome(listint_t **head);
+        Return: 0 if it is not a palindrome, 1 if it is a palindrome
+        An empty list is considered a palindrome
