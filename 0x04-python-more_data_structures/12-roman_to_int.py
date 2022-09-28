@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if type(roman_string) != str or roman_string == None:
+        return 0
     ans = 0
     i = 0
     while (i < len(roman_string)):
