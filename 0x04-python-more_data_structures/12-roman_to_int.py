@@ -1,4 +1,20 @@
 #!/usr/bin/python3
+def value(rom):
+    if (rom == 'I'):
+        return 1
+    if (rom == 'V'):
+        return 5
+    if (rom == 'X'):
+        return 10
+    if (rom == 'L'):
+        return 50
+    if (rom == 'C'):
+        return 100
+    if (rom == 'D'):
+        return 500
+    if (rom == 'M'):
+        return 1000
+    return -1
 def roman_to_int(roman_string):
     if type(roman_string) != str or roman_string == None:
         return 0
@@ -18,20 +34,3 @@ def roman_to_int(roman_string):
             ans = ans + str1
             i = i + 1
     return ans
-
-def value(rom):
-    if (rom == 'I'):
-        return 1
-    if (rom == 'V'):
-        return 5
-    if (rom == 'X'):
-        return 10
-    if (rom == 'L'):
-        return 50
-    if (rom == 'C'):
-        return 100
-    if (rom == 'D'):
-        return 500
-    if (rom == 'M'):
-        return 1000
-    return -1
