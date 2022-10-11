@@ -1,76 +1,83 @@
-# 0x05. Python - Exceptions
+# 0x06. Python - Classes and Objects
 
 # Mandatory and advanced tasks
 
-0. Write a function that prints x elements of a list.
+0. Write an empty class Square that defines a square:
 
-        Prototype: def safe_print_list(my_list=[], x=0):
-        my_list can contain any type (integer, string, etc.)
-        All elements must be printed on the same line followed by a new line.
-        x represents the number of elements to print
-        x can be bigger than the length of my_list
-        Returns the real number of elements printed
-        You have to use try: / except:
         You are not allowed to import any module
-        You are not allowed to use len()
+        
+1. Write a class Square that defines a square by: (based on 0-square.py)
 
-1. Write a function that prints an integer with "{:d}".format().
-
-        Prototype: def safe_print_integer(value):
-        value can be any type (integer, string, etc.)
-        The integer should be printed followed by a new line
-        Returns True if value has been correctly printed (it means the value is an integer)
-        Otherwise, returns False
-        You have to use try: / except:
-        You have to use "{:d}".format() to print as integer
+        Private instance attribute: size
+        Instantiation with size (no type/value verification)
         You are not allowed to import any module
-        You are not allowed to use type()
 
-2. Write a function that prints the first x elements of a list and only integers.
+        Why?
+        Why size is private attribute?
 
-        Prototype: def safe_print_list_integers(my_list=[], x=0):
-        my_list can contain any type (integer, string, etc.)
-        All integers have to be printed on the same line followed by a new line - other type of value in the list must be skipped (in silence).
-        x represents the number of elements to access in my_list
-        x can be bigger than the length of my_list - if it’s the case, an exception is expected to occur
-        Returns the real number of integers printed
-        You have to use try: / except:
-        You have to use "{:d}".format() to print an integer
+        The size of a square is crucial for a square, many things depend of it (area computation, etc.), so you, as class builder, must control the type and value of this attribute. One way to have the control is to keep it privately. You will see in next tasks how to get, update and validate the size value.
+
+2. Write a class Square that defines a square by: (based on 1-square.py)
+
+        Private instance attribute: size
+        Instantiation with optional size: def __init__(self, size=0):
+                size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+                if size is less than 0, raise a ValueError exception with the message size must be >= 0
         You are not allowed to import any module
-        You are not allowed to use len()
 
-3. Write a function that divides 2 integers and prints the result.
+3. Write a class Square that defines a square by: (based on 2-square.py)
 
-        Prototype: def safe_print_division(a, b):
-        You can assume that a and b are integers
-        The result of the division should print on the finally: section preceded by Inside result:
-        Returns the value of the division, otherwise: None
-        You have to use try: / except: / finally:
-        You have to use "{}".format() to print the result
+        Private instance attribute: size
+        Instantiation with optional size: def __init__(self, size=0):
+                size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+                if size is less than 0, raise a ValueError exception with the message size must be >= 0
+        Public instance method: def area(self): that returns the current square area
         You are not allowed to import any module
   
-4. Write a function that divides element by element 2 lists.
+4. Write a class Square that defines a square by: (based on 3-square.py)
 
-        Prototype: def list_division(my_list_1, my_list_2, list_length):
-        my_list_1 and my_list_2 can contain any type (integer, string, etc.)
-        list_length can be bigger than the length of both lists
-        Returns a new list (length = list_length) with all divisions
-        If 2 elements can’t be divided, the division result should be equal to 0
-        If an element is not an integer or float:
-        print: wrong type
-        If the division can’t be done (/0):
-        print: division by 0
-        If my_list_1 or my_list_2 is too short
-        print: out of range
-        You have to use try: / except: / finally:
+        Private instance attribute: size:
+                property def size(self): to retrieve it
+                property setter def size(self, value): to set it:
+                        size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+                        if size is less than 0, raise a ValueError exception with the message size must be >= 0
+        Instantiation with optional size: def __init__(self, size=0):
+        Public instance method: def area(self): that returns the current square area
         You are not allowed to import any module
+        
+        Why?
+
+        Why a getter and setter?
+
+        Reminder: size is a private attribute. We did that to make sure we control the type and value. Getter and setter methods are not 100% Python, but more OOP. With them, you will be able to validate the assignment of a private attribute and also define how getting the attribute value will be available from outside - by copy? by assignment? etc. Also, adding type/value validation in the setter will centralize the logic, since you will do it in only one place.
   
-5. Write a function that raises a type exception.
+5. Write a class Square that defines a square by: (based on 4-square.py)
 
-        Prototype: def raise_exception():
+        Private instance attribute: size:
+                property def size(self): to retrieve it
+                property setter def size(self, value): to set it:
+                        size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+                        if size is less than 0, raise a ValueError exception with the message size must be >= 0
+        Instantiation with optional size: def __init__(self, size=0):
+        Public instance method: def area(self): that returns the current square area
+        Public instance method: def my_print(self): that prints in stdout the square with the character #:
+                if size is equal to 0, print an empty line
         You are not allowed to import any module
 
-6. Write a function that raises a name exception with a message.
+6. Write a class Square that defines a square by: (based on 5-square.py)
 
-        Prototype: def raise_exception_msg(message=""):
+        Private instance attribute: size:
+                property def size(self): to retrieve it
+                property setter def size(self, value): to set it:
+                        size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+                        if size is less than 0, raise a ValueError exception with the message size must be >= 0
+        Private instance attribute: position:
+                property def position(self): to retrieve it
+                property setter def position(self, value): to set it:
+                        position must be a tuple of 2 positive integers, otherwise raise a TypeError exception with the message position must be a tuple of 2 positive integers
+        Instantiation with optional size and optional position: def __init__(self, size=0, position=(0, 0)):
+        Public instance method: def area(self): that returns the current square area
+        Public instance method: def my_print(self): that prints in stdout the square with the character #:
+                if size is equal to 0, print an empty line
+                position should be use by using space - Don’t fill lines by spaces when position[1] > 0
         You are not allowed to import any module
