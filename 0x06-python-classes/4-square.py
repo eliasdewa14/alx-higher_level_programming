@@ -6,7 +6,6 @@
 class Square:
     """Represent a square."""
 
-
     def __init__(self, size=0):
         """Initialize a new square.
 
@@ -27,7 +26,6 @@ class Square:
         if (value < 0):
             raise ValueError('size must be >= 0')
         self.__size = value
-
 
     def area(self):
         """Return the current area of the square"""
