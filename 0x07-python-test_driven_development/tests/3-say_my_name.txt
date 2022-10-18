@@ -27,14 +27,8 @@ Traceback (most recent call last):
 	...
 TypeError: last_name must be a string
 
-for first_name as a list and last_name as string
->>> say_my_name(["Elias"], ("Dewa"))
+for more than two arguments
+>>> say_my_name("Elias", "Dewa", "Ahmed")
 Traceback (most recent call last):
-	...
-TypeError: first_name must be a string
-
-for first_name as string and last_name as list
->>> say_my_name("Elias", ["Dewa"]))
-Traceback (most recent call last):
-	...
-TypeError: last_name must be a string
+...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given

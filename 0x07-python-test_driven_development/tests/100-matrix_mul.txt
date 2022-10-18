@@ -1,0 +1,67 @@
+multiplies 2 matrices
+
+
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+for list integer value of m_a and m_b
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+for list of integer value of m_a and m_b
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16], [0, 0]]
+
+for list value of m_a and integer value of m_b
+>>> matrix_mul([[1, 2]], 3)
+Traceback (most recent call last):
+TypeError: m_b must be a list
+
+for string value of m_a and list value of m_b
+>>> matrix_mul("Elias", [[1, 2]])
+Traceback (most recent call last):
+TypeError: m_a must be a list
+
+for list of string value of m_a and integer value m_b
+>>> matrix_mul(["Elias", "Dewa", "Ahmed"], [[1, 2]])
+Traceback (most recent call last):
+TypeError: m_a must be a list of lists
+
+for list of integer value of m_a and string value m_b
+>>> matrix_mul([[1, 2]], ["Elias", "Dewa","Ahmed"])
+Traceback (most recent call last):
+TypeError: m_b must be a list of lists
+
+for empty list of m_a and integer value m_b
+>>> matrix_mul([], [[1, 2]])
+Traceback (most recent call last):
+ValueError: m_a can't be empty
+
+for list of integer value of m_a and empty list of m_b
+>>> matrix_mul([[1, 2]], [[]])
+Traceback (most recent call last):
+ValueError: m_b can't be empty
+
+for list of integer and string value of m_a and integer value m_b
+>>> matrix_mul([[1, 2, "Elias"], [3, 4]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+TypeError: m_a should contain only integers or floats
+
+for list of integer value of m_a and list of integer and string value m_b
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, "Elias"]])
+Traceback (most recent call last):
+TypeError: m_b should contain only integers or floats
+
+for different size of m_a and m_b
+>>> matrix_mul([[1, 2], [3, 4]], [[5], [6, 7]])
+Traceback (most recent call last):
+TypeError: each row of m_b must should be of the same size
+
+for different size of m_a and m_b
+>>> matrix_mul([[1, 2], [3]], [[4, 5], [6, 7]])
+Traceback (most recent call last):
+TypeError: each row of m_a must should be of the same size
+
+for different size of m_a[0] and m_b
+>>> matrix_mul([[1, 2, 4], [3, 5, 7]], [[7, 8], [5, 9]])
+Traceback (most recent call last):
+ValueError: m_a and m_b can't be multiplied
