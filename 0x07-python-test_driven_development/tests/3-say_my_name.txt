@@ -1,0 +1,40 @@
+Concatenate first name and last name with strings and space
+
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+for first_name and last_name as string
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+for first_name and last_name as string
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+for first_name as string and none for last_name
+>>> say_my_name("Bob")
+My name is Bob
+
+for first_name as number and last_name as string
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+for first_name as string and last_name as number
+>>> say_my_name("Walter", 12)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
+
+for first_name as a list and last_name as string
+>>> say_my_name(["Elias"], ("Dewa"))
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+for first_name as string and last_name as list
+>>> say_my_name("Elias", ["Dewa"]))
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string

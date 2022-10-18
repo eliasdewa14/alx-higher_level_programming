@@ -1,0 +1,28 @@
+prints a text with 2 new lines after each of these characters: ., ? and :
+
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+for text as string
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+Non autem hoc:""")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quonam modo?
+
+Utrum igitur tibi litteram videor an totas paginas commovere?
+
+Non autem hoc:
+
+for text as integer
+>>> text_indentation(24)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+for text as float
+>>> text_indentation(24.5)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
