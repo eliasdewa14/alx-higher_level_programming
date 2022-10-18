@@ -8,4 +8,4 @@ class LockedClass():
     Args:
         first_name: name
     """
-    __slots__ = (first_name)
+    __slots__ = ("first_name")
