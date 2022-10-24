@@ -1,0 +1,66 @@
+import
+>>> MyList = __import__('1-my_list').MyList
+
+
+for positive integers
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+for only one input
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> print(my_list)
+[1]
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
+
+for only empty list
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
+
+for negative numbers
+
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
+
+for NULL object
+
+Traceback (most recent call last):
+  ...
+NameError: name 'NULL' is not defined
+
+for not defined object
+
+Traceback (most recent call last):
+  ...
+NameError: name 'my_list2' is not defined
