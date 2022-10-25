@@ -1,77 +1,117 @@
-# 0x0A. Python - Inheritance
+# 0x0B. Python - Input/Output
 
 # Mandatory and advanced tasks
 
-0. Write a function that returns the list of available attributes and methods of an object:
+0. Write a function that reads a text file (UTF8) and prints it to stdout:
 
-        Prototype: def lookup(obj):
-        Returns a list object
+        Prototype: def read_file(filename=""):
+        You must use the with statement
+        You don’t need to manage file permission or file doesn't exist exceptions.
         You are not allowed to import any module
         
-1. Write a class MyList that inherits from list:
+1. Write a function that writes a string to a text file (UTF8) and returns the number of characters written:
 
-        Public instance method: def print_sorted(self): that prints the list, but sorted (ascending sort)
-        You can assume that all the elements of the list will be of type int
+        Prototype: def write_file(filename="", text=""):
+        You must use the with statement
+        You don’t need to manage file permission exceptions.
+        Your function should create the file if doesn’t exist.
+        Your function should overwrite the content of the file if it already exists.
         You are not allowed to import any module
 
-2. Write a function that returns True if the object is exactly an instance of the specified class ; otherwise False.
+2. Write a function that appends a string at the end of a text file (UTF8) and returns the number of characters added:
 
-        Prototype: def is_same_class(obj, a_class):
+        Prototype: def append_write(filename="", text=""):
+        If the file doesn’t exist, it should be created
+        You must use the with statement
+        You don’t need to manage file permission or file doesn't exist exceptions.
         You are not allowed to import any module
 
-3. Write a function that returns True if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class ; otherwise False.
+3. Write a function that returns the JSON representation of an object (string):
 
-        Prototype: def is_kind_of_class(obj, a_class):
-        You are not allowed to import any module
+        Prototype: def to_json_string(my_obj):
+        You don’t need to manage exceptions if the object can’t be serialized.
   
-4. Write a function that returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False.
+4. Write a function that returns an object (Python data structure) represented by a JSON string:
 
-        Prototype: def inherits_from(obj, a_class):
-        You are not allowed to import any module
+        Prototype: def from_json_string(my_str):
+        You don’t need to manage exceptions if the JSON string doesn’t represent an object.
   
-5. Write an empty class BaseGeometry.
+5. Write a function that writes an Object to a text file, using a JSON representation:
 
+        Prototype: def save_to_json_file(my_obj, filename):
+        You must use the with statement
+        You don’t need to manage exceptions if the object can’t be serialized.
+        You don’t need to manage file permission exceptions.
+
+6. Write a function that creates an Object from a “JSON file”:
+
+        Prototype: def load_from_json_file(filename):
+        You must use the with statement
+        You don’t need to manage exceptions if the JSON string doesn’t represent an object.
+        You don’t need to manage file permissions / exceptions.
+        
+7. Write a script that adds all arguments to a Python list, and then save them to a file:
+
+        You must use your function save_to_json_file from 5-save_to_json_file.py
+        You must use your function load_from_json_file from 6-load_from_json_file.py
+        The list must be saved as a JSON representation in a file named add_item.json
+        If the file doesn’t exist, it should be created
+        You don’t need to manage file permissions / exceptions.
+        
+8. Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
+
+        Prototype: def class_to_json(obj):
+        obj is an instance of a Class
+        All attributes of the obj Class are serializable: list, dictionary, string, integer and boolean
+        You are not allowed to import any module
+        
+9. Write a class Student that defines a student by:
+
+        Public instance attributes:
+                first_name
+                last_name
+                age
+        Instantiation with first_name, last_name and age: def __init__(self, first_name, last_name, age):
+        Public method def to_json(self): that retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py)
+        You are not allowed to import any module
+        
+10. Write a class Student that defines a student by: (based on 9-student.py)
+
+        Public instance attributes:
+                first_name
+                last_name
+                age
+        Instantiation with first_name, last_name and age: def __init__(self, first_name, last_name, age):
+        Public method def to_json(self, attrs=None): that retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py):
+                If attrs is a list of strings, only attribute names contained in this list must be retrieved.
+                Otherwise, all attributes must be retrieved
+        You are not allowed to import any module
+        
+11. Write a class Student that defines a student by: (based on 10-student.py)
+
+        Public instance attributes:
+                first_name
+                last_name
+                age
+        Instantiation with first_name, last_name and age: def __init__(self, first_name, last_name, age):
+        Public method def to_json(self, attrs=None): that retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py):
+                If attrs is a list of strings, only attributes name contain in this list must be retrieved.
+                Otherwise, all attributes must be retrieved
+        Public method def reload_from_json(self, json): that replaces all attributes of the Student instance:
+                You can assume json will always be a dictionary
+                A dictionary key will be the public attribute name
+                A dictionary value will be the value of the public attribute
         You are not allowed to import any module
 
-6. Write a class BaseGeometry (based on 5-base_geometry.py).
+Now, you have a simple implementation of a serialization and deserialization mechanism (concept of representation of an object to another format, without losing any information and allow us to rebuild an object based on this representation)
 
-        Public instance method: def area(self): that raises an Exception with the message area() is not implemented
+12. Technical interview preparation:
+
+        You are not allowed to google anything
+        Whiteboard first
+        Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n:
+
+        Returns an empty list if n <= 0
+        You can assume n will be always an integer
         You are not allowed to import any module
-        
-7. Write a class BaseGeometry (based on 6-base_geometry.py).
 
-        Public instance method: def area(self): that raises an Exception with the message area() is not implemented
-        Public instance method: def integer_validator(self, name, value): that validates value:
-                you can assume name is always a string
-                if value is not an integer: raise a TypeError exception, with the message <name> must be an integer
-                if value is less or equal to 0: raise a ValueError exception with the message <name> must be greater than 0
-        You are not allowed to import any module
-        
-8. Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
-
-        Instantiation with width and height: def __init__(self, width, height):
-                width and height must be private. No getter or setter
-                width and height must be positive integers, validated by integer_validator
-        
-9. Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)
-
-        Instantiation with width and height: def __init__(self, width, height)::
-                width and height must be private. No getter or setter
-                width and height must be positive integers validated by integer_validator
-        the area() method must be implemented
-        print() should print, and str() should return, the following rectangle description: [Rectangle] <width>/<height>
-        
-10. Write a class Square that inherits from Rectangle (9-rectangle.py):
-
-        Instantiation with size: def __init__(self, size)::
-                size must be private. No getter or setter
-                size must be a positive integer, validated by integer_validator
-        the area() method must be implemented
-        
-11. Write a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py).
-
-        Instantiation with size: def __init__(self, size)::
-                size must be private. No getter or setter
-                size must be a positive integer, validated by integer_validator
-        the area() method must be implemented
-        print() should print, and str() should return, the square description: [Square] <width>/<height>
