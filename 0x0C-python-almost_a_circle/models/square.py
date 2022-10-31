@@ -38,8 +38,8 @@ class Square(Rectangle):
         Args:
             value (int): value to be set
         """
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """ a public str method
