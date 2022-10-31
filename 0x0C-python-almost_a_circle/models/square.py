@@ -47,13 +47,13 @@ class Square(Rectangle):
         Returns:
             str: a format string representation of a square instance
         """
-        return "[Square] ({}) {}/{} - {})".format(self.id, self.x, self.y,
-                                                  self.width)
+        return "[Square] ({:d}) {:d}/{:d} - {:d})".format(self.id, self.x,
+                                                          self.y, self.width)
 
-    def updete(self, *args,  **kwargs):
+    def update(self, *args,  **kwargs):
         """ a public method with assigned an argument to attributes
         """
-        if len(args):
+        if args and len(args):
             i = 0
             for arg in args:
                 if i == 0:
@@ -65,7 +65,7 @@ class Square(Rectangle):
                 elif i == 3:
                     self.y = arg
                 i += 1
-        elif len(kwargs):
+        elif kwargs and len(kwargs):
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
@@ -75,14 +75,14 @@ class Square(Rectangle):
                     self.x = value
                 elif key == "y":
                     self.y = value
-    
+
     def to_dictionary(self):
         """ a public method
 
         Returns:
             dict: the dictionary representation of a square
         """
-        return {'id': self.id,
-                'x': self.x,
-                'size': self.size,
-                'y': self.y}
+        return {"id": self.id,
+                "x": self.x,
+                "size": self.size,
+                "y": self.y}
