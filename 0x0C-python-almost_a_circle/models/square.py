@@ -47,12 +47,10 @@ class Square(Rectangle):
         Returns:
             str: a format string representation of a square instance
         """
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                         self.x,
-                                                         self.y,
-                                                         self.width)
+        return "[Square] ({}) {}/{} - {})".format(self.id, self.x, self.y,
+                                                  self.width)
 
-    def update(self, *args,  **kwargs):
+    def updete(self, *args,  **kwargs):
         """ a public method with assigned an argument to attributes
         """
         if len(args):
