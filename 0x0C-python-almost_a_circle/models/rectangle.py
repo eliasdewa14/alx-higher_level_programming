@@ -173,7 +173,7 @@ class Rectangle(Base):
     def update(self, *args,  **kwargs):
         """ a public method with assigned an argument to attributes
         """
-        if len(args):
+        if args and len(args):
             i = 0
             for arg in args:
                 if i == 0:
@@ -187,7 +187,7 @@ class Rectangle(Base):
                 elif i == 4:
                     self.y = arg
                 i += 1
-        elif len(kwargs):
+        elif kwargs and len(kwargs):
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
