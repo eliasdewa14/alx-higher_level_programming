@@ -49,11 +49,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(type(json_list1), list)
         self.assertEqual(json_list1, [])
 
-    def test_from_json_string_empty(self):
-        list2 = ""
-        json_list2 = Base.from_json_string(list2)
-        self.assertEqual(type(json_list2), list)
-        self.assertEqual(json_list2, [])
 
     def test_from_json_string(self):
         list3 = '[{"id": 89, "width": 10, "height": 4, "x": 4, "y": 6}, \
