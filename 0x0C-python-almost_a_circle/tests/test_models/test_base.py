@@ -58,7 +58,3 @@ class TestBase(unittest.TestCase):
         self.assertEqual(json_list3,
                          [{"id": 89, "width": 10, "height": 4, "x": 4, "y": 6},
                           {"id": 7, "width": 1, "height": 7, "x": 6, "y": 8}])
-
-
-if __name__ == "__main__":
-    unittest.main()
