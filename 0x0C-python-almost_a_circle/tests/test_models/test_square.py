@@ -173,7 +173,3 @@ class TestSquare(unittest.TestCase):
         s4 = Square(3, 5, 1)
         s4.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
         self.assertEqual(str(s4), '[Square] (33) 5/1 - 3')
-
-
-if __name__ == "__main__":
-    unittest.main()
