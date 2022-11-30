@@ -1,6 +1,7 @@
 # 0x0E. SQL - More queries
 
-image.png
+![image](https://user-images.githubusercontent.com/54449260/204793270-b91c3750-a4f0-4d01-97b1-b59891742be2.png)
+
 
 # More Info
 # Comments for your SQL file:
@@ -77,6 +78,9 @@ In the container, credentials are root/root
         7   Suspense
         8   Thriller
 
+![image](https://user-images.githubusercontent.com/54449260/204793482-56f7a2f2-2785-43fd-93d2-f28b8d0bd49d.png)
+
+
 # Mandatory and advanced tasks
 
 0. Write a script that lists all privileges of the MySQL users user_0d_1 and user_0d_2 on your server (in localhost).
@@ -151,7 +155,7 @@ In the container, credentials are root/root
 
 10. Import the database dump from hbtn_0d_tvshows to your MySQL server: download
 
-        Write a script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
+    Write a script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
 
         Each record should display: tv_shows.title - tv_show_genres.genre_id
         Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
@@ -160,7 +164,7 @@ In the container, credentials are root/root
 
 11. Import the database dump of hbtn_0d_tvshows to your MySQL server: download (same as 10-genre_id_by_show.sql)
 
-Write a script that lists all shows contained in the database hbtn_0d_tvshows.
+    Write a script that lists all shows contained in the database hbtn_0d_tvshows.
 
         Each record should display: tv_shows.title - tv_show_genres.genre_id
         Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
@@ -170,7 +174,7 @@ Write a script that lists all shows contained in the database hbtn_0d_tvshows.
 
 12. Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 11-genre_id_all_shows.sql)
 
-Write a script that lists all shows contained in hbtn_0d_tvshows without a genre linked.
+    Write a script that lists all shows contained in hbtn_0d_tvshows without a genre linked.
 
         Each record should display: tv_shows.title - tv_show_genres.genre_id
         Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
@@ -179,7 +183,7 @@ Write a script that lists all shows contained in hbtn_0d_tvshows without a genre
 
 13. Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 12-no_genre.sql)
 
-Write a script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
+    Write a script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
 
         Each record should display: <TV Show genre> - <Number of shows linked to this genre>
         First column must be called genre
@@ -191,7 +195,7 @@ Write a script that lists all genres from hbtn_0d_tvshows and displays the numbe
 
 14. Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 13-count_shows_by_genre.sql)
 
-Write a script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter.
+    Write a script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter.
 
         The tv_shows table contains only one record where title = Dexter (but the id can be different)
         Each record should display: tv_genres.name
@@ -201,7 +205,7 @@ Write a script that uses the hbtn_0d_tvshows database to lists all genres of the
 
 15. Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 14-my_genres.sql)
 
-Write a script that lists all Comedy shows in the database hbtn_0d_tvshows.
+    Write a script that lists all Comedy shows in the database hbtn_0d_tvshows.
 
         The tv_genres table contains only one record where name = Comedy (but the id can be different)
         Each record should display: tv_shows.title
@@ -211,7 +215,7 @@ Write a script that lists all Comedy shows in the database hbtn_0d_tvshows.
 
 16. Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 15-comedy_only.sql)
 
-Write a script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
+    Write a script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
 
         If a show doesn’t have a genre, display NULL in the genre column
         Each record should display: tv_shows.title - tv_genres.name
