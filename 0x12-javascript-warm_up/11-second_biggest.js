@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
 if (process.argv.length > 2) {
-  const sort_list = process.argv.sort();
-  const reverse_list = sort_list.reverse();
-  console.log(reverse_list[1]);
+  const sortList = process.argv.sort();
+  const reverseList = sortList.reverse();
+  console.log(reverseList[1]);
 } else {
   console.log(0);
 }
