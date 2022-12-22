@@ -10,12 +10,21 @@ from sys import argv
 if __name__ == '__main__':
     """To get all states from the database
     """
-    con = MySQLdb.connect(host='localhost', port=3306,
-                          user=argv[1], passwd=argv[2], dbname=argv[3])
-    cur = con.cursor()
-    cur.execute("SELECT * \
+    con = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3])
+
+    curs = con.cursor()
+    curs.execute("SELECT * \
                 FROM states \
-                WHERE Name = %s \
-                ORDER BY states.id", [argv[4]])
-    for state in cur.fetchall():
+                WHERE name LIKE BINARY %(state_name)s \
+                ORDER BY states.id ASC", {'state_name': argv[4]})
+
+    for state in curs.fetchall():
         print(state)
+
+    curs.close()
+    con.close()
