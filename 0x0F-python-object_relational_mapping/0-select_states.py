@@ -8,14 +8,13 @@ from sys import argv
 if __name__ == '__main__':
     """To get all states from the database
     """
-    con = MySQLdb.connect(host='localhost',
+    con = MySQLdb.connect(host="localhost",
                           port=3306,
                           user=argv[1],
                           passwd=argv[2],
                           db=argv[3])
     cur = con.cursor()
-    cur.execute("SELECT * \
-                FROM states")
+    cur.execute("SELECT * FROM states")
 
     for state in cur.fetchall():
         print(state)
