@@ -9,10 +9,12 @@ if __name__ == '__main__':
     """To get all states from the database
     """
     con = MySQLdb.connect(host='localhost', port=3306,
-                          user=argv[1], passwd=argv[2], dbname=argv[3])
+                          user=argv[1], passwd=argv[2], db=argv[3])
     cur = con.cursor()
     cur.execute("SELECT * \
                 FROM states \
-                ORDER BY states.id")
+                ORDER BY states.id ASC")
     for state in cur.fetchall():
         print(state)
+    cur.close()
+    con.close()
