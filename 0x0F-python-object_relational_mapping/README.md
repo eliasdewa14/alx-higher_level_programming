@@ -148,7 +148,7 @@ You can ignore it.
 
 6. First state model
 
-   ![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/f84fe6edb9436c8560996c6d72e17ea51dab28e1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221221T183421Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=284946bbf8b2b86bdb8de5992a4dfdba9c4716ea674a337ac6067210d5b9e29c)
+   ![image](https://user-images.githubusercontent.com/54449260/209214182-d39599a8-4cbb-409c-8467-e6b582bacdc9.png)
 
    Write a python file that contains the class definition of a State and an instance Base = declarative_base():
 
