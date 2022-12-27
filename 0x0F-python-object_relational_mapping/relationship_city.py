@@ -4,7 +4,7 @@
 """
 
 from sqlalchemy import Column, String, Integer, ForeignKey
-from relationship_state import Base, State
+from relationship_state import Base
 
 
 class City(Base):
@@ -13,4 +13,4 @@ class City(Base):
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey("state.id"), nullable=False)
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
