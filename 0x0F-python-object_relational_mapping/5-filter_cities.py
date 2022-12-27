@@ -17,12 +17,12 @@ if __name__ == '__main__':
         db=argv[3])
 
     curs = con.cursor()
-    curs.execute("SELECT cities.id, cities.name \
-                FROM cities JOIN states ON cities.state_id = states.id \
-                WHERE name LIKE BINARY %(state_name)s \
-                ORDER BY cities.id ASC", {'state_name': argv[4]})
+    curs.execute("SELECT cities.name \
+                FROM cities INNER JOIN states ON cities.state_id = states.id \
+                WHERE states.name = %s \
+                ORDER BY cities.id ASC", [argv[4]])
 
-    print(", ".join([state[1] for state in curs.fetchall()]))
+    print(", ".join([state[0] for state in curs.fetchall()]))
 
     curs.close()
     con.close()
