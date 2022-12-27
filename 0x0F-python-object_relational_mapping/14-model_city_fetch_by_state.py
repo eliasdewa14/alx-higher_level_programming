@@ -4,7 +4,7 @@
 from sys import argv
 from model_state import Base, State
 from model_city import Base, City
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
@@ -18,7 +18,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for city, state in session.query(State, City).join(City):
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
+    for city, state in session.query(City, State).join(State).all():
+        print("{}: ({:d}) {}".format(state.name, city.id, city.name))
 
+    session.commit()
     session.close()

@@ -22,8 +22,7 @@ if __name__ == '__main__':
                 WHERE name LIKE BINARY %(state_name)s \
                 ORDER BY cities.id ASC", {'state_name': argv[4]})
 
-    for state in curs.fetchall():
-        print(", ".join(state))
+    print(", ".join([state[1] for state in curs.fetchall()]))
 
     curs.close()
     con.close()

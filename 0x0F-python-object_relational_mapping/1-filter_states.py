@@ -14,16 +14,16 @@ if __name__ == '__main__':
         port=3306,
         user=argv[1],
         passwd=argv[2],
-        dbname=argv[3])
+        db=argv[3])
 
     curs = con.cursor()
     curs.execute("SELECT * \
                 FROM states \
-                WHERE name LIKE BINARY 'N%' \
                 ORDER BY states.id ASC")
 
     for state in curs.fetchall():
-        print(state)
+        if state[1].startswith('N'):
+            print(state)
 
     curs.close()
     con.close()
