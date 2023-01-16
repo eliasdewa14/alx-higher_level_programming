@@ -8,12 +8,12 @@ def find_peak(list_of_integers):
     length = len(list_of_integers)
     if length == 0:
         return
-    if (length == 1):
+    if length == 1:
         return list_of_integers[0]
-    elif (length == 2):
+    elif length == 2:
         return max(list_of_integers)
 
-    half = length // 2
+    half = int(length // 2)
     maximum = list_of_integers[half]
     if maximum > list_of_integers[half - 1]:
         return maximum
