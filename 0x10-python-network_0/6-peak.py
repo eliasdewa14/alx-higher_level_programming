@@ -21,4 +21,4 @@ def find_peak(list_of_integers):
     elif maximum < list_of_integers[half - 1]:
         return find_peak(list_of_integers[:half])
     else:
-        return find_peak(list_of_integers[half:])
+        return find_peak(list_of_integers[half + 1:])
