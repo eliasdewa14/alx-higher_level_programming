@@ -6,8 +6,8 @@
 def find_peak(list_of_integers):
     """Finds a peak in a list of unsorted integers"""
     length = len(list_of_integers)
-    if length == 0:
-        return
+    if list_of_integers == []:
+        return None
     if length == 1:
         return list_of_integers[0]
     elif length == 2:
