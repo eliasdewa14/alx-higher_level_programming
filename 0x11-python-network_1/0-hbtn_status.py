@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ a Python script that fetches https://alx-intranet.hbtn.io/status
 """
-from urllib.response import urlopen
+from urllib.request import urlopen
 
 if __name__ == '__main__':
     with urlopen('https://alx-intranet.hbtn.io/status') as response:
