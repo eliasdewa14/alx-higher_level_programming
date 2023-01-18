@@ -8,9 +8,9 @@ import requests
 
 if __name__ == '__main__':
     url = 'https://api.github.com/repos/{}/{}/commits'.format(
-        argv[1], argv[2])
+        argv[2], argv[1])
     req = requests.get(url)
     result = req.json()
     for line in result[:10]:
-        print(line.get('sha'), end=": ")
-        print(line.get('commit').get('author').get('name'))
+        print('{}: {}'.format(line.get('sha'),
+                              line.get('commit').get('author').get('name')))
