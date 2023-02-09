@@ -2,8 +2,8 @@
 
 const request = require('request');
 
-const url = 'https://swapi.dev/api/films/' + process.argv[2] + "/";
-let listChars = [];
+const url = 'https://swapi.dev/api/films/' + process.argv[2] + '/';
+let characters = [];
 
 request(url, (error, response, body) => {
   if (error) {
@@ -16,11 +16,11 @@ request(url, (error, response, body) => {
 });
 
 const getCharacters = (count) => {
-  if (count === listChars.length) {
+  if (count === characters.length) {
     return;
   }
 
-  request(listChars[count], (error, response, body) => {
+  request(characters[count], (error, response, body) => {
     if (error) {
       console.log(error);
       return;
