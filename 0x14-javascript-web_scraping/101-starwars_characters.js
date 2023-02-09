@@ -25,7 +25,7 @@ const getCharacters = (count) => {
       console.log(error);
       return;
     }
-    console.lg(JSON.parse(body).name);
+    console.log(JSON.parse(body).name);
     getCharacters(count + 1);
   });
 };
