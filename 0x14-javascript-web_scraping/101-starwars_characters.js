@@ -16,7 +16,7 @@ request(url, (error, response, body) => {
 });
 
 const getCharacters = (count) => {
-  if (count === characters.length) {
+  if (count === listChars.length) {
     return;
   }
 
