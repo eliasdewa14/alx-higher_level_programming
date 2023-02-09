@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-const url = 'https://swapi.dev/api/films/' + process.argv[2];
+const url = 'https://swapi.dev/api/films/' + process.argv[2] + "/";
 let listChars = [];
 
 request(url, (error, response, body) => {
