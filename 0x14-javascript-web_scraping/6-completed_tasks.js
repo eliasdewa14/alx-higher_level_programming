@@ -2,11 +2,11 @@
 
 const request = require('request');
 
-request.get(process.argv[2], { json: true }, (error, response, body) => {
+request.get(process.argv[2], (error, response, body) => {
   if (!error) {
     const completedTask = {};
     toDo = JSON.parse(body);
-    toDo.forEach((todo) => {
+    bo.forEach((todo) => {
       if (todo.completed) {
         if (!completedTask[todo.userId]) {
           completedTask[todo.userId] = 1;
