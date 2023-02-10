@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-request.get(process.argv[2], { json: true }, (error, response, body) => {
+request.get(process.argv[2], function (error, response, body) {
   if (!error) {
     const completedTask = {};
     body.forEach((todo) => {
